@@ -14,6 +14,7 @@ parameters:
     # cert parameters
     salt_minion_ca_host: ${_param:infra_config_hostname}.${_param:cluster_domain}
     salt_minion_ca_authority: salt_master_ca
+    salt_api_password_hash: password
 
     # infra service addresses
     infra_config_address: 172.17.11.4
