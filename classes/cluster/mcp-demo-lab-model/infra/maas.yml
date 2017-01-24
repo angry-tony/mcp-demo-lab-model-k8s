@@ -1,0 +1,8 @@
+classes:
+- system.linux.system.repo.tcp_salt
+- system.openssh.client.lab
+- system.maas.region.single
+- cluster.mcp-demo-lab-model
+parameters:
+    linux_system_codename: xenial
+
