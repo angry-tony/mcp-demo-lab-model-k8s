@@ -17,6 +17,14 @@ parameters:
     deploy_address: ${_param:infra_config_deploy_address}
     salt_master_host: ${_param:infra_config_address}
     linux_system_codename: xenial
+  salt:
+    master:
+      environment:
+        prd:
+          formula:
+            maas:
+              source: pkg
+              name: salt-formula-maas
   reclass:
     storage:
       node:
