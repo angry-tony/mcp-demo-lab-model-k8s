@@ -5,6 +5,8 @@ classes:
 - system.openssh.server.team.tcpcloud
 - cluster.mcp-demo-lab-model.infra
 - cluster.mcp-demo-lab-model.kubernetes
+- cluster.mcp-demo-lab-model.opencontrail
+- cluster.mcp-demo-lab-model.openstack
 parameters: 
   _param:
     cluster_domain: mcp-demo-lab-model.local
@@ -53,6 +55,9 @@ parameters:
     kubernetes_compute_node01_single_address: 172.17.11.144
     kubernetes_compute_node02_single_address: 172.17.11.145
 
+    openstack_control_address: ${_param:kubernetes_control_address}
+    opencontrail_control_address: ${_param:kubernetes_control_address}
+    openstack_telemetry_address: ${_param:kubernetes_control_address}
     ##FIXME if ntp defined
     #ntp_strata_host1: 
     #ntp_strata_host2:

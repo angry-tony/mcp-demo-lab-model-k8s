@@ -1,0 +1,10 @@
+classes:
+- system.linux.system.repo.contrail
+- system.linux.system.repo.mos9
+- system.opencontrail.compute.cluster
+- cluster.mcp-demo-lab-model
+parameters:
+  _param:
+    cluster_vip_address: ${_param:openstack_control_address}
+    cluster_local_address: ${_param:control_address}
+    opencontrail_compute_address: ${_param:single_address}

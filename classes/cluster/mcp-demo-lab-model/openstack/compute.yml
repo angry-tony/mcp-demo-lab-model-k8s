@@ -1,0 +1,17 @@
+classes:
+- system.linux.system.repo_local.contrail
+- system.linux.system.repo_local.mos9
+- system.nova.compute.cluster
+- cluster.mcp-demo-lab-model
+parameters:
+  _param:
+    cluster_vip_address: ${_param:openstack_control_address}
+    cluster_local_address: ${_param:control_address}
+    cluster_node01_hostname: ctl01
+    cluster_node01_address: ${_param:openstack_control_node01_address}
+    cluster_node02_hostname: ctl02
+    cluster_node02_address: ${_param:openstack_control_node02_address}
+    cluster_node03_hostname: ctl03
+    cluster_node03_address: ${_param:openstack_control_node03_address}
+    opencontrail_compute_address: ${_param:single_address}
+    nova_vncproxy_url: http://${_param:openstack_proxy_address}:6080

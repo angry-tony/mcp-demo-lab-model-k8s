@@ -46,6 +46,8 @@ parameters:
           classes:
           - cluster.${_param:cluster_name}.kubernetes.compute
           - cluster.${_param:cluster_name}.kubernetes.compute_interface
+          - cluster.${_param:cluster_name}.opencontrail.compute
+          - cluster.${_param:cluster_name}.openstack.compute
           params:
             salt_master_host: ${_param:reclass_config_master}
             linux_system_codename: xenial
@@ -58,6 +60,8 @@ parameters:
           classes:
           - cluster.${_param:cluster_name}.kubernetes.compute
           - cluster.${_param:cluster_name}.kubernetes.compute_interface
+          - cluster.${_param:cluster_name}.opencontrail.compute
+          - cluster.${_param:cluster_name}.openstack.compute
           params:
             salt_master_host: ${_param:reclass_config_master}
             linux_system_codename: xenial

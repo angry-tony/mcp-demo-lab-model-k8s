@@ -1,0 +1,8 @@
+parameters:
+  _param:
+    opencontrail_version: 3.0
+    opencontrail_stats_password: 0z9qWhgVLJzqLKnC
+    opencontrail_compute_dns: 8.8.8.8
+    opencontrail_compute_gateway: 172.17.11.129
+    opencontrail_compute_iface: bond0.120
+    opencontrail_compute_iface_mask: 26
