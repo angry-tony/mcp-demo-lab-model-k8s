@@ -31,31 +31,38 @@ parameters:
         kubernetes_control_node01:
           params:
             deploy_address: ${_param:kubernetes_control_node01_deploy_address}
+            data_address: ${_param:kubernetes_control_node01_data_address}
         kubernetes_control_node02:
           params:
             deploy_address: ${_param:kubernetes_control_node02_deploy_address}
+            data_address: ${_param:kubernetes_control_node02_data_address}
         kubernetes_control_node03:
           params:
             deploy_address: ${_param:kubernetes_control_node03_deploy_address}
+            data_address: ${_param:kubernetes_control_node03_data_address}
         kubernetes_compute_node01:
           name: ${_param:kubernetes_compute_node01_hostname}
           domain: ${_param:cluster_domain}
           classes:
           - cluster.${_param:cluster_name}.kubernetes.compute
+          - cluster.${_param:cluster_name}.kubernetes.compute_interface
           params:
             salt_master_host: ${_param:reclass_config_master}
             linux_system_codename: xenial
             deploy_address: ${_param:kubernetes_compute_node01_deploy_address}
+            control_address: ${_param:kubernetes_compute_node01_control_address}
             single_address: ${_param:kubernetes_compute_node01_single_address}
         kubernetes_compute_node02:
           name: ${_param:kubernetes_compute_node02_hostname}
           domain: ${_param:cluster_domain}
           classes:
           - cluster.${_param:cluster_name}.kubernetes.compute
+          - cluster.${_param:cluster_name}.kubernetes.compute_interface
           params:
             salt_master_host: ${_param:reclass_config_master}
             linux_system_codename: xenial
             deploy_address: ${_param:kubernetes_compute_node02_deploy_address}
+            control_address: ${_param:kubernetes_compute_node02_control_address}
             single_address: ${_param:kubernetes_compute_node02_single_address}
         maas_node01:
           name: mas01

@@ -30,15 +30,22 @@ parameters:
     kubernetes_control_hostname: kvm
 
     # kubernetes deploy addresses
-    kubernetes_control_node01_deploy_address: 172.17.11.7
-    kubernetes_control_node02_deploy_address: 172.17.11.8
-    kubernetes_control_node03_deploy_address: 172.17.11.9
-    kubernetes_compute_node01_deploy_address: 172.17.11.10
-    kubernetes_compute_node02_deploy_address: 172.17.11.11
+    kubernetes_control_node01_deploy_address: 172.17.11.59
+    kubernetes_control_node02_deploy_address: 172.17.11.55
+    kubernetes_control_node03_deploy_address: 172.17.11.56
+    kubernetes_compute_node01_deploy_address: 172.17.11.57
+    kubernetes_compute_node02_deploy_address: 172.17.11.22
+
+    # kubernetes deploy addresses
+    kubernetes_control_node01_data_address: 172.17.11.141
+    kubernetes_control_node02_data_address: 172.17.11.142
+    kubernetes_control_node03_data_address: 172.17.11.143
+    kubernetes_compute_node01_control_address: 172.17.11.81
+    kubernetes_compute_node02_control_address: 172.17.11.82
 
     # kubernetes service addresses
     kubernetes_control_address: 172.17.11.70
-    kubernetes_control_node01_address: 172.17.11.67
+    kubernetes_control_node01_address: 172.17.11.71
     kubernetes_control_node02_address: 172.17.11.68
     kubernetes_control_node03_address: 172.17.11.69
 

@@ -21,31 +21,3 @@ parameters:
     common:
       hyperkube:
         image: docker-prod-virtual.docker.mirantis.net/mirantis/kubernetes/hyperkube-amd64:v1.4.6-6
-##FIXME
- # linux:
- #   network:
- #     interface:
- #       eth0:
- #         enabled: true
- #         type: slave
- #         master: bond1
- #         mtu: 9000
- #         pre_up_cmds:
- #         - /sbin/ethtool --offload eth6 rx off tx off tso off gro off
- #       eth1:
- #         enabled: true
- #         type: slave
- #         master: bond1
- #         mtu: 9000
- #         pre_up_cmds:
- #         - /sbin/ethtool --offload eth7 rx off tx off tso off gro off
- #       bond0:
- #         enabled: true
- #         proto: manual
- #         type: bond
- #         use_interfaces:
- #         - eth0
- #         - eth1
- #         slaves: eth0 eth1
- #         mode: active-backup
- #         mtu: 9000
