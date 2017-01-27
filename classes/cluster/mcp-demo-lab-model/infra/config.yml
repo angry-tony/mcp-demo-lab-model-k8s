@@ -4,12 +4,12 @@ classes:
 - system.salt.master.pkg
 - system.salt.master.api
 - system.salt.minion.ca.salt_master
+- system.salt.minion.cert.k8s_server
 - system.reclass.storage.salt
 - system.reclass.storage.system.kubernetes_control_cluster
 - cluster.mcp-demo-lab-model
 parameters:
   _param:
-    salt_master_base_environment: prd
     reclass_data_repository: "https://github.com/pupapaik/mcp-demo-lab-model.git"
     reclass_data_revision: master
     reclass_config_master: ${_param:infra_config_deploy_address}

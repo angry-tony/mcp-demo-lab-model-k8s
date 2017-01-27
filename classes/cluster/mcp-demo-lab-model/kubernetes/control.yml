@@ -2,7 +2,6 @@ classes:
 - service.etcd.server.cluster
 - system.haproxy.proxy.listen.kubernetes.etcd
 - system.linux.system.repo.docker
-- system.salt.minion.cert.k8s_server_certificate
 - system.kubernetes.master.cluster
 - cluster.mcp-demo-lab-model.kubernetes.compute
 - cluster.mcp-demo-lab-model
@@ -16,6 +15,11 @@ parameters:
         calico:
           key: /calico/v1/ipam/v4/pool/${_param:calico_private_network}-${_param:calico_private_netmask}
           value: '{"masquerade": true, "cidr": "${_param:calico_private_network}/${_param:calico_private_netmask}"}'
+  kubernetes:
+    master:
+      addons:
+        dns:
+          replicas: 3
   linux:
     network:
       interface:
