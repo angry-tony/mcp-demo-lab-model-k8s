@@ -3,6 +3,7 @@
 classes:
 - system.linux.system.single
 - system.openssh.server.team.tcpcloud
+- system.openssh.server.team.ccp_team
 - cluster.mcp-demo-lab-model.infra
 - cluster.mcp-demo-lab-model.kubernetes
 - cluster.mcp-demo-lab-model.opencontrail

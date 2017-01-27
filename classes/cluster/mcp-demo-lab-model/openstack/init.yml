@@ -1,5 +1,13 @@
 parameters:
   _param:
+    # CCP parameters
+    ccp_public_interface: bond0.119
+    ccp_private_interface: bond0.119
+    ccp_kubernetes_host: 127.0.0.1
+    ccp_control_namespace: ccp
+    ccp_registry_address: 127.0.0.1:31500
+    ccp_galera_replicas: 3
+
     openstack_version: mitaka
     openstack_region: RegionOne
     admin_email: root@localhost

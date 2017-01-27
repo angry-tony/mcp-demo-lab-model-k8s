@@ -29,6 +29,8 @@ parameters:
     storage:
       node:
         kubernetes_control_node01:
+          classes:
+          - cluster.${_param:cluster_name}.openstack.control
           params:
             deploy_address: ${_param:kubernetes_control_node01_deploy_address}
             data_address: ${_param:kubernetes_control_node01_data_address}
