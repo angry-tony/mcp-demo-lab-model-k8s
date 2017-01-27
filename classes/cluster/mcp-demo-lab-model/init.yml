@@ -59,6 +59,10 @@ parameters:
     openstack_control_address: ${_param:kubernetes_control_address}
     opencontrail_control_address: ${_param:kubernetes_control_address}
     openstack_telemetry_address: ${_param:kubernetes_control_address}
+    openstack_control_node01_address: ${_param:kubernetes_control_address}
+    openstack_control_node02_address: ${_param:kubernetes_control_address}
+    openstack_control_node03_address: ${_param:kubernetes_control_address}
+    openstack_proxy_address: ${_param:kubernetes_control_address}
     ##FIXME if ntp defined
     #ntp_strata_host1: 
     #ntp_strata_host2:
