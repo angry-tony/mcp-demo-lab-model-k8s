@@ -1,6 +1,6 @@
 classes:
-- system.linux.system.repo_local.contrail
-- system.linux.system.repo_local.mos9
+- system.linux.system.repo.contrail
+- system.linux.system.repo.mos9
 - system.nova.compute.cluster
 - cluster.mcp-demo-lab-model
 parameters:
