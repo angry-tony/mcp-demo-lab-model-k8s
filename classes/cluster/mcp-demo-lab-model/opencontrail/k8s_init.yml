@@ -1,0 +1,14 @@
+classes:
+- service.opencontrail.control.container
+- service.opencontrail.support
+- cluster.mcp-demo-lab-model.opencontrail.analytics
+- cluster.mcp-demo-lab-model.opencontrail.control
+- cluster.mcp-demo-lab-model.opencontrail.config
+- cluster.mcp-demo-lab-model.opencontrail.database
+- cluster.mcp-demo-lab-model.opencontrail.web
+- cluster.mcp-demo-lab-model
+#- system.haproxy.proxy.listen.opencontrail
+parameters:
+  kubernetes:
+    control:
+      enabled: true

@@ -10,6 +10,7 @@ parameters:
           roles:
           - controller
       replicas:
+        keystone: 3
         nova-api: 3
         nova-conductor: 3
         nova-scheduler: 3
