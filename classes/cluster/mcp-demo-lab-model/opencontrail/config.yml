@@ -18,12 +18,12 @@ parameters:
                     port: 9160
                 ifmap:
                   members:
-                  - user: cab24-r820-13
-                    password: cab24-r820-13
-                  - user: cab24-r820-14
-                    password: cab24-r820-14
-                  - user: cab24-r820-15
-                    password: cab24-r820-15
+                  - user: kvm01
+                    password: kvm01
+                  - user: kvm02
+                    password: kvm02
+                  - user: kvm03
+                    password: kvm03
       service:
         contrail-config:
           enabled: true

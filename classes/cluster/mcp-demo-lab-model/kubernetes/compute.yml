@@ -2,9 +2,19 @@ classes:
 - system.linux.system.repo.docker
 - system.kubernetes.pool.cluster
 - system.salt.minion.cert.k8s_client_certificate
-#- system.bird.server.single
+- service.bird.server.single
 - cluster.mcp-demo-lab-model
 parameters:
+  bird:
+    server:
+      network:
+        engine: calico
+      bgp:
+        bind:
+          host: ${_param:single_address}
+          port: 180
+        neighbor:
+          full_mesh_port: 180
   kubernetes:
     pool:
       network:
@@ -13,11 +23,10 @@ parameters:
           image: tcpcloud/calico-ctl:latest
         cni:
           image: tcpcloud/calico-cni:latest
-
-#        volumes:
-#          - /srv/calico/bird.cfg.mesh.template:/etc/calico/confd/templates/bird.cfg.mesh.template
-#          - /srv/calico/bird.cfg.no-mesh.template:/etc/calico/confd/templates/bird.cfg.no-mesh.template
-#          - /srv/calico/custom_filters.cfg:/etc/calico/confd/config/custom_filters.cfg
+        volumes:
+          - /srv/calico/bird.cfg.mesh.template:/etc/calico/confd/templates/bird.cfg.mesh.template
+          - /srv/calico/bird.cfg.no-mesh.template:/etc/calico/confd/templates/bird.cfg.no-mesh.template
+          - /srv/calico/custom_filters.cfg:/etc/calico/confd/config/custom_filters.cfg
     common:
       hyperkube:
         image: tcpcloud/hyperkube:v1.5.1
