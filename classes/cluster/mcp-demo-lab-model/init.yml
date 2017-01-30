@@ -64,6 +64,38 @@ parameters:
     openstack_control_node02_address: ${_param:kubernetes_control_address}
     openstack_control_node03_address: ${_param:kubernetes_control_address}
     openstack_proxy_address: ${_param:kubernetes_control_address}
-    ##FIXME if ntp defined
-    #ntp_strata_host1: 
-    #ntp_strata_host2:
+    openstack_message_queue_node01_address: ${_param:kubernetes_control_address}
+    openstack_message_queue_node02_address: ${_param:kubernetes_control_address}
+    openstack_message_queue_node03_address: ${_param:kubernetes_control_address}
+    openstack_database_address: ${_param:kubernetes_control_address}
+
+    # OpenContrail docker images names and versions
+    opencontrail_docker_analytics: tcpcloud/opencontrail-3.0-analytics
+    opencontrail_docker_analytics_tag: latest
+    opencontrail_docker_control: tcpcloud/opencontrail-3.0-control
+    opencontrail_docker_control_tag: latest
+    opencontrail_docker_webui: tcpcloud/opencontrail-3.0-webui
+    opencontrail_docker_webui_tag: latest
+    opencontrail_docker_config: tcpcloud/opencontrail-3.0-config
+    opencontrail_docker_config_tag: latest
+    opencontrail_docker_database: tcpcloud/opencontrail-3.0-database
+    opencontrail_docker_database_tag: latest
+
+    opencontrail_replicas: 1
+
+    opencontrail_database_service_host01: 10.254.0.27
+    opencontrail_database_service_host02: 10.254.0.28
+    opencontrail_database_service_host03: 10.254.0.29
+    opencontrail_analytics_service_host01: 10.254.0.30
+    opencontrail_analytics_service_host02: 10.254.0.31
+    opencontrail_analytics_service_host03: 10.254.0.32
+    opencontrail_control_service_host: 10.254.0.33
+    opencontrail_config_service_host: 10.254.0.34
+    opencontrail_collector_service_host: 10.254.0.35
+    opencontrail_web_service_host: 10.254.0.36
+    redis_service_host: 10.254.0.37
+    contrail_collector_config_version: 1
+    contrail_config_config_version: 1
+    contrail_control_config_version: 1
+    contrail_database_config_version: 1
+    contrail_web_config_version: 1
