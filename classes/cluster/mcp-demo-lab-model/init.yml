@@ -13,6 +13,7 @@ parameters:
     cluster_domain: mcp-demo-lab-model.local
     reclass_data_revision: master
     cluster_name: mcp-demo-lab-model
+    salt_master_base_environment: prd
 
     # cert parameters
     salt_minion_ca_host: ${_param:infra_config_hostname}.${_param:cluster_domain}
