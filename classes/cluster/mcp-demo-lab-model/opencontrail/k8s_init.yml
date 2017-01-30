@@ -12,3 +12,4 @@ parameters:
   kubernetes:
     control:
       enabled: true
+      config_type: kubernetes

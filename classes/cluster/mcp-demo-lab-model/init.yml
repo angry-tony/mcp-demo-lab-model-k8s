@@ -69,6 +69,8 @@ parameters:
     openstack_message_queue_node03_address: ${_param:kubernetes_control_address}
     openstack_database_address: ${_param:kubernetes_control_address}
 
+    rabbitmq_service_host: ${_param:kubernetes_control_address}
+
     # OpenContrail docker images names and versions
     opencontrail_docker_analytics: tcpcloud/opencontrail-3.0-analytics
     opencontrail_docker_analytics_tag: latest
