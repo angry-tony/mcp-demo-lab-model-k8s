@@ -20,6 +20,37 @@ parameters:
       addons:
         dns:
           replicas: 3
+    label:
+      label01:
+        value: kvm01
+        node: kvm01
+        enabled: true
+        key: openstack
+      label02:
+        value: kvm02
+        node: kvm02
+        enabled: true
+        key: openstack
+      label03:
+        value: kvm03
+        node: kvm03
+        enabled: true
+        key: openstack
+      label04:
+        value: control
+        node: kvm01
+        enabled: true
+        key: controller
+      label05:
+        value: control
+        node: kvm02
+        enabled: true
+        key: controller
+      label06:
+        value: control
+        node: kvm03
+        enabled: true
+        key: controller
   linux:
     network:
       interface:
