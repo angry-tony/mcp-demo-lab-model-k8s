@@ -16,6 +16,9 @@ parameters:
                     port: 9160
                   - host: ${_param:opencontrail_database_service_host03}
                     port: 9160
+                message_queue:
+                  user: openstack
+                  password: ${_param:rabbitmq_openstack_password}
                 ifmap:
                   members:
                   - user: kvm01
