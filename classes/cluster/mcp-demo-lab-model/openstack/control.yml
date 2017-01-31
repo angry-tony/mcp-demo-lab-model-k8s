@@ -15,3 +15,6 @@ parameters:
         nova-conductor: 3
         nova-scheduler: 3
         neutron-server: 3
+      source:
+        address: https://github.com/YorikSar/fuel-ccp.git
+        revision: external_ips
