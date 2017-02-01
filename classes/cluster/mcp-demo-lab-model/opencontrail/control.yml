@@ -34,7 +34,8 @@ parameters:
             name: dns-xmpp
 #          role: control
           role: control
-          type: LoadBalancer
+          type: NodePort
+          external_ip: ${_param:kubernetes_control_address}
           kind: Deployment
           apiVersion: extensions/v1beta1
           replicas: ${_param:opencontrail_replicas}

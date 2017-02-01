@@ -54,7 +54,8 @@ parameters:
           - port: 8443
             name: ifmap
           role: config
-          type: LoadBalancer
+          type: NodePort
+          external_ip: ${_param:kubernetes_control_address}
           kind: Deployment
           apiVersion: extensions/v1beta1
           replicas: ${_param:opencontrail_replicas}
