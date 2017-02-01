@@ -43,8 +43,8 @@ parameters:
           service_name: 'control-node'
           hostNetwork: True
           nodeSelector:
-          - key: controller
-            value: control
+          - key: openstack
+            value: kvm01
           container:
             contrail-control:
               image: ${_param:opencontrail_docker_control}

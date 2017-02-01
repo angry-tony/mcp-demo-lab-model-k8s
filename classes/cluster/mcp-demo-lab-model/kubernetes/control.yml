@@ -9,6 +9,11 @@ parameters:
   _param:
     keepalived_vip_interface: bond0.119
     keepalived_vip_virtual_router_id: 60
+  keepalived:
+    cluster:
+      instance:
+        VIP:
+          nopreempt: false
   etcd:
     server:
       setup:

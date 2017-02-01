@@ -19,6 +19,8 @@ parameters:
                 message_queue:
                   user: openstack
                   password: ${_param:rabbitmq_openstack_password}
+                identity:
+                  version: "3"
                 ifmap:
                   members:
                   - user: kvm01
@@ -59,8 +61,8 @@ parameters:
           image_pull_secretes: tcpcloud
           cluster_ip: ${_param:opencontrail_config_service_host}
           nodeSelector:
-          - key: controller
-            value: control
+          - key: openstack
+            value: kvm01
           container:
             contrail-config:
               image: ${_param:opencontrail_docker_config}

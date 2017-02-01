@@ -47,8 +47,8 @@ parameters:
           image_pull_secretes: tcpcloud
           cluster_ip: ${_param:opencontrail_collector_service_host}
           nodeSelector:
-          - key: controller
-            value: control
+          - key: openstack
+            value: kvm01
           container:
             contrail-collector:
               image: ${_param:opencontrail_docker_analytics}
