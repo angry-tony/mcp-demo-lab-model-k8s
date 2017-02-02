@@ -120,7 +120,7 @@ parameters:
                 read_only: True
                 sub_path: contrail-sudoers
               - name: opencontrail-config
-                mount: /etc/contrail/contrail-keystone-auth.conf
+                mount: /var/lib/contrail/contrail-keystone-auth.conf
                 read_only: True
                 sub_path: contrail-keystone-auth.conf
               - name: opencontrail-config
