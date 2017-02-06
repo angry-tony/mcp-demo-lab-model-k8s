@@ -77,11 +77,8 @@ parameters:
           - /sbin/ethtool --offload ${_param:primary_second_nic} rx off tx off tso off gro off
         bond0:
           enabled: true
-          proto: static
+          proto: manual
           type: bond
-          address: ${_param:deploy_address}
-          netmask: 255.255.255.192
-          gateway: 172.17.11.1
           use_interfaces:
           - ${_param:primary_second_nic}
           - ${_param:primary_first_nic}
@@ -89,6 +86,14 @@ parameters:
           mode: 802.3ad
           lacp_rate: 1
           mtu: 9000
+        br0:
+          enabled: true
+          address: ${_param:deploy_address}
+          netmask: 255.255.255.192
+          gateway: 172.17.11.1
+          type: bridge
+          use_interfaces:
+          - bond0
         bond0.119:
           enabled: true
           type: vlan
