@@ -3,6 +3,7 @@ classes:
 - system.haproxy.proxy.listen.kubernetes.etcd
 - system.linux.system.repo.docker
 - system.kubernetes.master.cluster
+- cluster.mcp-demo-lab-model.infra.kvm
 - cluster.mcp-demo-lab-model.kubernetes.compute
 - cluster.mcp-demo-lab-model
 parameters:
